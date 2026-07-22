@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/trahulprabhu38/gitops-manifests.git
     targetRevision: main
-    path: /argocd/tri
+    path: /argocd/projects/tri
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
