@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook
+  name: root-app
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/trahulprabhu38/JustTri.git
+    repoURL: https://github.com/trahulprabhu38/gitops-manifests.git
     targetRevision: main
-    path: /k8s
+    path: /tri
   destination:
     server: https://kubernetes.default.svc
-    namespace: tri
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true 
